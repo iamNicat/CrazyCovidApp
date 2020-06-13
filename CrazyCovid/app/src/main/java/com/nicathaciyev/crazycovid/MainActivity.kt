@@ -2,25 +2,17 @@ package com.nicathaciyev.crazycovid
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.Gravity
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.core.graphics.toColorInt
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.navigation.NavigationView
-import com.nicathaciyev.crazycovid.data.ApiService
-import com.nicathaciyev.crazycovid.data.responses.Country
-import com.nicathaciyev.crazycovid.data.responses.CountryItem
-import com.nicathaciyev.crazycovid.data.responses.GlobalItem
+import com.nicathaciyev.crazycovid.fragments.HomeFragment
+import com.nicathaciyev.crazycovid.fragments.InfoFragment
+import com.nicathaciyev.crazycovid.fragments.ListFragment
+import com.nicathaciyev.crazycovid.fragments.NewsFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() ,NavigationView.OnNavigationItemSelectedListener{
     lateinit var   listFragment : ListFragment

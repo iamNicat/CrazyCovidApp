@@ -1,8 +1,6 @@
 package com.nicathaciyev.crazycovid.data
 
-import com.nicathaciyev.crazycovid.data.responses.AzerbijanItem
-import com.nicathaciyev.crazycovid.data.responses.CountryItem
-import com.nicathaciyev.crazycovid.data.responses.GlobalItem
+import com.nicathaciyev.crazycovid.data.responses.*
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -18,5 +16,12 @@ interface ApiService {
 
     @GET("/all")
     fun getGlobalData() : Call<GlobalItem>
+
+    @GET("/api/news")
+    fun getLocalNews() : Call<List<NewsItem>>
+
+    @GET("/api/articles")
+    fun getLocalInfo() : Call<List<InfoItem>>
+
 
 }

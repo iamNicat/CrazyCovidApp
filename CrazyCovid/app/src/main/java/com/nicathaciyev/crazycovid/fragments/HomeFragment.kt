@@ -1,4 +1,4 @@
-package com.nicathaciyev.crazycovid
+package com.nicathaciyev.crazycovid.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.nicathaciyev.crazycovid.R
 import com.nicathaciyev.crazycovid.data.ApiService
 import com.nicathaciyev.crazycovid.data.responses.AzerbijanItem
-import com.nicathaciyev.crazycovid.data.responses.CountryItem
 import com.nicathaciyev.crazycovid.data.responses.GlobalItem
 import kotlinx.android.synthetic.main.fragment_home.*
 import retrofit2.Call

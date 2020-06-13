@@ -1,18 +1,18 @@
-package com.nicathaciyev.crazycovid
+package com.nicathaciyev.crazycovid.fragments
 
 import android.os.Bundle
 import android.util.Log
 import android.view.*
 import android.widget.EditText
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.nicathaciyev.crazycovid.MainActivity
+import com.nicathaciyev.crazycovid.R
+import com.nicathaciyev.crazycovid.adapters.MyAdapter
 import com.nicathaciyev.crazycovid.data.ApiService
-import com.nicathaciyev.crazycovid.data.responses.AzerbijanItem
 import com.nicathaciyev.crazycovid.data.responses.CountryItem
-import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.fragment_list.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -87,7 +87,10 @@ class ListFragment : Fragment() {
 
         recyclerView.apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = MyAdapter(displayList, context)
+            adapter = MyAdapter(
+                displayList,
+                context
+            )
         }
     }
 
@@ -103,7 +106,7 @@ class ListFragment : Fragment() {
                 actionView = searchView
             }
             val editText = searchView.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)
-            editText.hint = "Search..."
+            editText.hint = "Axtarır..."
 
             searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
